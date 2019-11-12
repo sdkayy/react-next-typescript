@@ -1,0 +1,186 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--theme-background-color);
+  color: var(--theme-foreground-color);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .loaded,
+.loaded * {
+  transition: all 0.2s ease-out;
+  transition-property: background-color, border-color, color, opacity, top, bottom, left, right, width, height, margin, padding, transform;
+} */
+
+.dark-theme .hide-dark-theme,
+.dark-theme .show-light-theme:not(.show-dark-theme),
+.light-theme .hide-light-theme,
+.light-theme .show-dark-theme:not(.show-light-theme) {
+  display: none;
+  pointer-events: none;
+}
+
+.dark-theme .invisible-dark-theme,
+.dark-theme .visible-light-theme:not(.visible-dark-theme),
+.light-theme .hide-light-theme,
+.light-theme .visible-dark-theme:not(.visible-light-theme) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+hr {
+  border-width: 0px;
+  border-bottom-width: 1px;
+  border-color: var(--theme-foreground-color-muted-10);
+}
+
+.transform-on-hover:hover,
+.btn:not(.btn-disabled):hover {
+  transform: translateY(-1px);
+}
+
+#landing a:not(.btn):not(.transform-on-hover):hover {
+  text-decoration: underline;
+  transform: none;
+}
+
+.btn-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* TODO remove from here */
+.base-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* TODO, Look into why this in a style tag wasn't working vs it working here */
+.horizontal-slider {
+  width: 100%;
+  height: 25px;
+}
+
+@media (max-width: 1280px) {
+  .base-container {
+    flex-direction: column;
+  }
+}
+
+.settings-card {
+  width: 100%;
+  padding: 1rem;
+}
+
+.fullscreen-content {
+  width: 100%;
+  max-width: 768px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 32px 126px;
+  flex: 1 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.section-card {
+  border-radius: 6px;
+  border: 1px solid #000000;
+  background: #ffffff;
+  margin-bottom: 16px;
+  padding: 16px;
+
+  @media (max-width: 768px) {
+    border-radius: 0;
+  }
+}
+
+.growth-text {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+    Based on: https://codepen.io/nickelse/pen/YGPJQG
+    Influenced by: https://sproutsocial.com/
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* #Mega Menu Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mega-menu {
+  display: none;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+
+
+
+/* #hoverable Class Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hoverable {
+  position: static;
+}
+
+.hoverable>a:after {
+  content: "\25BC";
+  font-size: 10px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+}
+
+.hoverable:hover .mega-menu {
+  display: block;
+}
+
+
+/* #toggle Class Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.toggleable>label:after {
+  content: "\25BC";
+  font-size: 10px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-input:not(checked)~.mega-menu {
+  display: none;
+}
+
+.toggle-input:checked~.mega-menu {
+  display: block;
+}
+
+.toggle-input:checked+label {
+  color: white;
+  background: #2c5282;
+  /*@apply bg-blue-800 */
+}
+
+.toggle-input:checked~label:after {
+  content: "\25B2";
+  font-size: 10px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+}

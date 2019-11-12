@@ -5,7 +5,7 @@ import checkCurrentUser from '../lib/checkCurrentUser';
 
 const ApplicationIndex = (props: any) => (
   <Container {...props}>
-    <p>Testing</p>
+    <p className={'text-lg font-light'}>Testing</p>
   </Container>
 );
 

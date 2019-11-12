@@ -1,5 +1,7 @@
 import App from 'next/app';
 import React from 'react';
+import '../styles/tailwind.css';
+import '../styles/theme.css';
 
 // @ts-ignore
 class MyApp extends App {

@@ -2,6 +2,7 @@ import React from 'react';
 import App from '../components/App';
 import ErrorFallback, { ErrorBoundary } from '../components/error';
 import ScrollManager from '../components/scrollManager';
+import Nav from '../components/nav';
 
 interface Props {
   children: any;
@@ -42,7 +43,10 @@ export default (props: Props) => (
       </style>
       <ScrollManager>
         <div className={'main-container'}>
-          <main>{props.children}</main>
+          <main>
+            <Nav {...props} />
+            {props.children}
+          </main>
         </div>
       </ScrollManager>
     </ErrorBoundary>

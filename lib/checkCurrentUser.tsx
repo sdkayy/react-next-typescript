@@ -4,7 +4,13 @@ export default ({ apolloClient, isAuthorization }) =>
   isAuthorization
     ? apolloClient
         .query({
-          query: gql``,
+          query: gql`
+            {
+              users {
+                id
+              }
+            }
+          `,
         })
         .then(({ data }) => {
           return {
