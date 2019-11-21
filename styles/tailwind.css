@@ -3,3 +3,13 @@
 /* purgecss end ignore */
 @tailwind components;
 @tailwind utilities;
+
+.description {
+  color: #acacac;
+  @apply text-sm;
+  @apply font-light;
+}
+
+.settings-header {
+  @apply mb-4;
+}

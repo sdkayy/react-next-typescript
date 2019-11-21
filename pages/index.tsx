@@ -1,12 +1,15 @@
 import React from 'react';
-import Container from '../lib/container';
-import { withApollo } from '../lib/withApollo';
+import { withApollo } from '../lib/apollo';
 import checkCurrentUser from '../lib/checkCurrentUser';
+import AppViewWrapper from '../components/appViewWrapper';
+import { DefaultContainer } from '../lib/container';
 
 const ApplicationIndex = (props: any) => (
-  <Container {...props}>
-    <p className={'text-lg font-light'}>Testing</p>
-  </Container>
+  <DefaultContainer {...props}>
+    <AppViewWrapper>
+      <p className={'text-lg font-light'}>Testing</p>
+    </AppViewWrapper>
+  </DefaultContainer>
 );
 
 ApplicationIndex.getInitialProps = async context => {

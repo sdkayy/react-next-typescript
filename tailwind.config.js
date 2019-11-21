@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 const staticColorFields = [
   'black',
   'blue',
@@ -87,6 +89,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Muli', ...defaultTheme.fontFamily.sans],
+      },
       backgroundColor: theme => theme('colors.bg'),
       textColor: theme => theme('colors.text'),
       borderColor: theme => ({
@@ -142,6 +147,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
+    require('tailwindcss-transitions')(),
     function({ addBase, config }) {
       addBase({
         h1: {

@@ -99,7 +99,7 @@ const App = ({ children, theme }: Props) => {
   const themeName = !themeList[theme] ? 'main' : theme;
 
   return (
-    <ThemeProvider theme={themeList[themeName]}>
+    <ThemeProvider theme={themeList}>
       <ThemedApp>
         <GlobalStyle />
         {children}

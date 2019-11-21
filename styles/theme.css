@@ -12,12 +12,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* .loaded,
-.loaded * {
-  transition: all 0.2s ease-out;
-  transition-property: background-color, border-color, color, opacity, top, bottom, left, right, width, height, margin, padding, transform;
-} */
-
 .dark-theme .hide-dark-theme,
 .dark-theme .show-light-theme:not(.show-dark-theme),
 .light-theme .hide-light-theme,
@@ -74,6 +68,18 @@ hr {
   }
 }
 
+.text-secondary {
+  color: #acacac;
+}
+
+.hover-card {
+  transition: all ease .5s;
+}
+
+.hover-card:hover {
+  transform: translateY(-2px);
+}
+
 .settings-card {
   width: 100%;
   padding: 1rem;
@@ -90,6 +96,34 @@ hr {
   @media (max-width: 768px) {
     padding: 16px;
   }
+}
+
+.box-shadow {
+  background-color: #fff;
+  box-shadow: rgba(0,0,0,.2) 0 0 15px 2px;
+} 
+
+.code-snippet {
+  background-color: #eee;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 8px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  font-family: monospace;
+  box-shadow: rgba(0,0,0,.2) 0 0 15px 2px;
+  margin: 12px;
+}
+
+.code-snippet > strong {
+  font-weight: bold;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0;
+  color: #454f63;
 }
 
 .section-card {

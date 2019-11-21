@@ -37,7 +37,7 @@ export const FancyLinkHolder = styled.div`
 `;
 
 export const FancyLink = styled.a`
-  color: ${props => props.theme.text.secondary};
+  color: #acacac;
   text-transform: uppercase;
   text-decoration: none;
   padding: 8px;
@@ -46,11 +46,11 @@ export const FancyLink = styled.a`
 `;
 
 export const App = styled.div`
-  color: ${props => props.theme.text.text};
+  color: #000;
 `;
 
 export const A = styled.a`
-  color: ${props => props.theme.brand.alt};
+  color: #000;
   &:active,
   &:hover {
     text-decoration: underline;
@@ -63,13 +63,13 @@ export const P = styled.p`
 `;
 
 export const Article = styled.article`
-  margin: ${props => props.theme.alignment.horizontalcenter};
+  margin: 12px;
   max-width: 650px;
 `;
 
 export const Button = styled.button`
   align-items: center;
-  background-color: ${props => props.theme.brand.alt};
+  background-color: #fff;
   border: 0;
   color: #ffffff;
   display: flex;

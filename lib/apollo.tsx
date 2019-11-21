@@ -1,17 +1,17 @@
-import React from 'react';
-import Head from 'next/head';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { API_URI, WS_URI } from './constants';
-import { ApolloClient } from 'apollo-client';
+import { HttpLink } from 'apollo-boost';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloClient } from 'apollo-client';
 import { concat, split } from 'apollo-link';
 import { setContext } from 'apollo-link-context';
-import { SubscriptionClient } from 'subscriptions-transport-ws';
-import { getMainDefinition } from 'apollo-utilities';
 import { WebSocketLink } from 'apollo-link-ws';
-import { HttpLink } from 'apollo-boost';
+import { getMainDefinition } from 'apollo-utilities';
 import fetch from 'isomorphic-unfetch';
 import cookie from 'js-cookie';
+import Head from 'next/head';
+import React from 'react';
+import { SubscriptionClient } from 'subscriptions-transport-ws';
+import { API_URI, WS_URI } from './constants';
 
 let apolloClient = null;
 
